@@ -2,14 +2,7 @@
   "email": {
     "options": {
       "base": "Email",
-      "acls": [
-        {
-          "accessType": "*",
-          "permission": "DENY",
-          "principalType": "ROLE",
-          "principalId": "$everyone"
-        }
-      ]
+      "acls": []
     },
     "dataSource": "mail",
     "public": false
@@ -32,14 +25,7 @@
           "type": "hasMany"
         }
       },
-      "acls": [
-        {
-          "accessType": "*",
-          "permission": "DENY",
-          "principalType": "ROLE",
-          "principalId": "$everyone"
-        }
-      ]
+      "acls": []
     },
     "dataSource": "db",
     "public": true
@@ -48,20 +34,7 @@
     "options": {
       "base": "AccessToken",
       "baseUrl": "access-tokens",
-      "acls": [
-        {
-          "accessType": "*",
-          "permission": "DENY",
-          "principalType": "ROLE",
-          "principalId": "$everyone"
-        },
-        {
-          "permission": "ALLOW",
-          "principalType": "ROLE",
-          "principalId": "$everyone",
-          "property": "create"
-        }
-      ]
+      "acls": []
     },
     "dataSource": "db",
     "public": true
@@ -78,20 +51,7 @@
           "type": "hasMany"
         }
       },
-      "acls": [
-        {
-          "accessType": "*",
-          "permission": "DENY",
-          "principalType": "ROLE",
-          "principalId": "$everyone"
-        },
-        {
-          "accessType": "READ",
-          "permission": "ALLOW",
-          "principalType": "ROLE",
-          "principalId": "$everyone"
-        }
-      ]
+      "acls": []
     },
     "properties": {},
     "public": true,
@@ -105,26 +65,7 @@
           "type": "hasMany"
         }
       },
-      "acls": [
-        {
-          "accessType": "*",
-          "permission": "DENY",
-          "principalType": "ROLE",
-          "principalId": "$everyone"
-        },
-        {
-          "accessType": "*",
-          "permission": "ALLOW",
-          "principalType": "ROLE",
-          "principalId": "$owner"
-        },
-        {
-          "permission": "DENY",
-          "principalType": "ROLE",
-          "principalId": "$owner",
-          "property": "removeById"
-        }
-      ]
+      "acls": []
     },
     "properties": {},
     "public": true,
@@ -132,14 +73,7 @@
   },
   "transaction": {
     "options": {
-      "acls": [
-        {
-          "accessType": "*",
-          "permission": "DENY",
-          "principalType": "ROLE",
-          "principalId": "$everyone"
-        }
-      ]
+      "acls": []
     },
     "properties": {},
     "public": true,
@@ -147,14 +81,7 @@
   },
   "alert": {
     "options": {
-      "acls": [
-        {
-          "accessType": "WRITE",
-          "permission": "DENY",
-          "principalType": "ROLE",
-          "principalId": "$everyone"
-        }
-      ]
+      "acls": []
     },
     "properties": {},
     "public": true,
